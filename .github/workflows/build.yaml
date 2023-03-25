@@ -10,7 +10,7 @@ on:
 jobs:
   build:
 
-    runs-on: [ self-hosted, forest]
+    runs-on: [ self-hosted, forest ]
 
     steps:
     - uses: actions/checkout@v3
