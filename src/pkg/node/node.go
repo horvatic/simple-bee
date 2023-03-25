@@ -7,8 +7,8 @@ type node struct {
 }
 
 func NewNode(ip string, name string, tags []string) *node {
-    n := node{ip: ip, name: name, tags: tags}
-    return &n
+	n := node{ip: ip, name: name, tags: tags}
+	return &n
 }
 
 func (n node) GetIp() string {
