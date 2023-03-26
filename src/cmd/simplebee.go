@@ -1,16 +1,10 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/horvatic/simple-bee/pkg/node"
-	"github.com/horvatic/simple-bee/pkg/system"
+	"github.com/horvatic/simple-bee/pkg/cluster"
+	"github.com/horvatic/simple-bee/pkg/store"
 )
 
 func main() {
-	sampleNode := node.NewNode(system.GetLocalIP(), system.GetHostName(), system.GetTags())
-
-	fmt.Println(sampleNode.GetIp())
-	fmt.Println(sampleNode.GetName())
-	fmt.Println(sampleNode.GetTags())
+	cluster.Run(store.NewMemoryStore())
 }
