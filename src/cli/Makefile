@@ -2,7 +2,7 @@
 .NOTPARALLEL:
 build: clean test
 	go mod tidy
-	GOHOSTARCH=amd64 GOOS=linux GOARCH=arm64 go build -o bin/simplebee cmd/simplebee.go
+	go build -o bin/beekeeper cmd/beekeeper.go
 
 .PHONY: test
 .NOTPARALLEL:
