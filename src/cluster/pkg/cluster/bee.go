@@ -37,6 +37,7 @@ func clusterJoin(w http.ResponseWriter, req *http.Request) {
 
 func requestJoinCode(w http.ResponseWriter, req *http.Request) {
 	joinId := uuid.NewString()
+	clusterStore.SaveJoinRequestId(joinId)
 	fmt.Fprintf(w, requestJoinCluster(joinId))
 }
 
